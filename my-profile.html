@@ -34,35 +34,98 @@
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+  <header class="navbar navbar-expand-lg  bg-dark  sticky-top py-1 ">
+    <div class="header-top">
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark  sticky-top py-1 navigation">
+        <form class="form-inline my-2 my-lg-0">
+          <a class="form-control mr-sm-4 img-logo-back" href="inicio.html"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </form>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="inicio.html">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Opciones
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="products.html">Productos</a>
+                <a class="dropdown-item" href="categories.html">Categorías</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Hola <span class="user-nav-span"></span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="my-profile.html">Perfil</a>
+                <a class="dropdown-item" href="sell.html">Vender</a>
+                <a class="dropdown-item" href="cart.html">Mi carrito <i class="fal fa-shopping-cart"></i></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="index.html">Cerrar sesión</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Buscar..." aria-label="Search"
+              id="searchInput">
+          </form>
+        </div>
+      </nav>
     </div>
-  </nav>
+  </header>
+
+  <main role="main" class="pb-5 color-light">
+    <div class="text-center p-4 py-5 bg-perfil">
+        <h2>Mi perfil</h2>
+        <p class="lead">Verás aquí tus datos del perfil.</p>
+    </div>
   <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-4" >
+         
+          <img src="https://static.carrefour.es/hd_510x_/img_pim_food/000051_00_1.jpg" class="card-img"  alt="...">
+          <span >
+            <button type="file" class="btn-dark"><img class="image-fluid" src="https://p1.hiclipart.com/preview/314/56/857/camera-icon-equipment-icon-icon-image-icon-photo-icon-photography-icon-picture-icon-black-text-logo-png-clipart.jpg" style="max-width: 10%;" alt="">
+          </button></span>
+          
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title" id="profileName" style="font-weight:bolder;"></h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li id="profileYears" class="list-group-item"><span id="profileYearsSpan"></span> </li>
+            <li id="profileEmail" class="list-group-item"></li>
+            <li id="profileNumber" class="list-group-item"> <span id="profileNumberSpan"></span></li>
+          </ul>
+          <div class="card-body">
+            <button type="button"class="btn btn-dark" id="dataChangeBtn"><span id="dataChangeSpan">Modificar datos personales</span></button>
+            
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <footer class="text-muted bg-light">
+  </main>
+  <footer class="color-grey">
     <div class="container">
+      <p class="float-right">
+        <a href="#" class="a-style">Volver arriba</a>
+      </p>
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+      <p>Clickea <a target="_blank" class="a-style" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
   </footer>
-  <div class="alert fade alert-success" role="alert" id="alertResult">
-    <span id="resultSpan"></span>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
@@ -74,6 +137,7 @@
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/dropzone.js"></script>
+  <script src="js/login.js"></script>
   <script src="js/init.js"></script>
   <script src="js/my-profile.js"></script>
 </body>
